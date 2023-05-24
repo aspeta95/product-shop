@@ -46,7 +46,8 @@ const Products = ({ products }) => {
       </ul>
 
       <p>Thisgs to add:</p>
-      <p>Navbar</p>
+      {/* <p>Navbar</p> */}
+      <p>Checkout Table multiply sum prices</p>
       <p>Checkout Stripe</p>
       <p>Cart Icon Count</p>
       <p>Cart Icon Animation on Count change</p>
