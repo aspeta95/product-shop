@@ -1,0 +1,103 @@
+.cartContainer {
+  width: 400px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  background-color: rgb(51, 53, 53, 0.8);
+  border-left: 1px solid gray;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 20px;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.cartContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.cartContainer > button {
+  margin-top: 15px;
+}
+
+.cartProduct {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: dimgray;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.productDetails {
+  padding: 10px;
+}
+
+.productQuantity {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.productQuantity * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.productImage img {
+  width: 200px;
+  aspect-ratio: 16/9;
+}
+
+.removeButton {
+  position: absolute;
+  top: -10px;
+  right: -20px;
+  border: unset;
+}
+
+.removeButton button {
+  background-color: unset;
+  font-size: 20px;
+}
+
+.removeButton button:focus {
+  outline: unset;
+}
+
+.removeButton button:hover {
+  border-color: transparent;
+}
+
+.showCart {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  z-index: 10;
+}
+
+.debug {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 8px 24px;
+  border-radius: 32px;
+  opacity: 0.95;
+  backdrop-filter: blur(8px);
+}
+
+.debug span {
+  font-size: 12px;
+  color: #09f;
+  opacity: 0.8;
+}
