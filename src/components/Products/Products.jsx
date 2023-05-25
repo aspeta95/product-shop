@@ -6,7 +6,7 @@ import "./Products.css";
 const Products = ({ products }) => {
   const { start, setStart, end, setEnd, page, setPage } =
     useContext(PaginationContext);
-  const { addToCart } = useContext(CartContext);
+  const { cart, addToCart } = useContext(CartContext);
 
   function handleChangePreviousPage() {
     if (start > 0) {
@@ -34,23 +34,33 @@ const Products = ({ products }) => {
       )}
       <ul>
         {products.slice(start, end).map((product) => {
+          
+          const productInCart = cart.findIndex((item) => item.id === product.id);          
+          let productQuantity = 0;
+
+          if (productInCart >= 0) {
+            productQuantity = cart[productInCart].quantity;
+          }       
+        
+
           return (
             <li key={product.id} className="singleProduct">
               <img src={product.thumbnail} />
               <h3>{product.title}</h3>
               <p>{product.price} €</p>
-              <button onClick={() => addToCart(product)}>Add to cart</button>
+              <button 
+              onClick={() => addToCart(product)}>
+                Add to cart 
+                ({productQuantity})
+                </button>
             </li>
           );
         })}
       </ul>
 
-      <p>Thisgs to add:</p>
+      <p>Things to add:</p>
       {/* <p>Navbar</p> */}
-      <p>Checkout Table multiply sum prices</p>
       <p>Checkout Stripe</p>
-      <p>Cart Icon Count</p>
-      <p>Cart Icon Animation on Count change</p>
     </div>
   );
 };

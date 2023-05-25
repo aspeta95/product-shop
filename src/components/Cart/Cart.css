@@ -84,6 +84,20 @@
   z-index: 10;
 }
 
+.cart-count {
+  width: 25px;
+  height: 25px;
+  position: fixed;
+  top: 1.3rem;
+  right: 1.5rem;
+  background-color: #ff00009c;
+  border-radius: 50%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .debug {
   position: fixed;
   left: 16px;

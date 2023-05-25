@@ -34,6 +34,7 @@ const Cart = () => {
       <div>
         <div className="showCart">
           <CartOpen isOpen={showCart} />
+          <p className="cart-count">{cart.length}</p>
         </div>
       </div>
       {!showCart && (
