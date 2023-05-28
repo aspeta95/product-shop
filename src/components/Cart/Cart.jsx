@@ -49,7 +49,7 @@ const Cart = () => {
               </div>
               <div className="productDetails">
                 <h3>{product.title}</h3>
-                <p>{product.price} €</p>
+                <p>{product.priceN} €</p>
                 <div className="productQuantity">
                   <button onClick={() => decreaseProductQuantity(product)}>
                     <AiOutlineMinus />
@@ -65,9 +65,6 @@ const Cart = () => {
               </div>
             </div>
           ))}
-          {/* <div className="debug">
-        <span>{JSON.stringify(cart)}</span>
-      </div> */}
         </div>
       )}
     </>
